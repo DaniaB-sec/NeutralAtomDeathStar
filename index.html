@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Death Star Quantum Control System — Interactive Neutral-Atom Quantum Computing Demonstration">
+  <title>Death Star Quantum Control System // Neutral-Atom QPU</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app-viewport">
+    <!-- Top Command Console Header Bar -->
+    <header id="hud-header">
+      <div class="hud-left">
+        <svg class="hud-emblem" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="46" stroke="#225a88" stroke-width="4" fill="none"/>
+          <circle cx="50" cy="50" r="22" fill="#64d2ff"/>
+          <line x1="50" y1="4" x2="50" y2="96" stroke="#225a88" stroke-width="4"/>
+          <line x1="4" y1="50" x2="96" y2="50" stroke="#225a88" stroke-width="4"/>
+          <circle cx="50" cy="20" r="5" fill="#5dffa8"/>
+        </svg>
+        <div class="hud-title-wrap">
+          <span class="hud-title">DEATH STAR QUANTUM CONTROL SYSTEM</span>
+          <span class="hud-sub">NEUTRAL-ATOM OPTICAL-TWEEZER QPU // ⁸⁷Rb REGISTER</span>
+        </div>
+      </div>
+
+      <div class="hud-center">
+        <span id="hud-status">STATUS: READY</span>
+      </div>
+
+      <div class="hud-right">
+        <div class="hud-actions">
+          <span id="hud-phase">PHASE 1/10: INITIALIZE</span>
+          <button id="btn-run" class="ctrl-btn primary-run" title="Run presentation demo sequence (Space / Enter)">▶ RUN QUANTUM PROGRAM</button>
+          <button id="btn-pause" class="ctrl-btn" style="display:none;" title="Pause / Resume (P)">⏸ PAUSE (P)</button>
+          <button id="btn-skip" class="ctrl-btn" style="display:none;" title="Skip to next phase (Space)">⏭ NEXT (Space)</button>
+          <button id="btn-save-img" class="ctrl-btn" style="display:none;" title="Save resonance fluorescence sensor image as PNG">💾 SAVE IMAGE (.PNG)</button>
+          <button id="btn-reset" class="ctrl-btn" title="Reset demo to initial state (R)">↺ RESET (R)</button>
+          <button id="btn-sound" class="ctrl-btn" title="Toggle audio effects (M)">🔇 SOUND: OFF (M)</button>
+          <button id="btn-explore" class="ctrl-btn" title="Open Scientific Dossier & Q&A Mode (S / E)">🔬 SCIENCE / EXPLORE (S)</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Global Progress Bar -->
+    <div id="hud-progress-container">
+      <div id="hud-progress-bar"></div>
+    </div>
+
+    <!-- Main Viewport -->
+    <main id="main-view">
+      <!-- Python Code Panel (Left side) -->
+      <div id="code-container"></div>
+
+      <!-- Main Interactive 2D Canvas Stage -->
+      <canvas id="stage-canvas"></canvas>
+
+      <!-- Floating Quantum Pulse Panel [Ω(t), Δ(t)] -->
+      <div id="pulse-container"></div>
+
+      <!-- Floating 1/R^6 Interaction Scaling Panel -->
+      <div id="r6-container"></div>
+    </main>
+
+    <!-- Bottom Presentation Caption Banner -->
+    <footer id="hud-caption">
+      <div class="caption-inner">
+        <span class="caption-title">DEATH STAR QUANTUM CONTROL SYSTEM</span>
+        <span class="caption-body">Click [RUN QUANTUM PROGRAM] to initiate the neutral-atom computational pipeline.</span>
+        <span class="caption-sci">🔬 “Nature manufactures the qubit. We engineer the control.”</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scientific Reference & Q&A Modal Overlay -->
+  <div id="science-container"></div>
+
+  <!-- Portable scripts loaded in dependency order (No CDN, No ES modules for file:// compatibility) -->
+  <script src="js/config.js"></script>
+  <script src="js/prng.js"></script>
+  <script src="js/register.js"></script>
+  <script src="js/physics/rydberg.js"></script>
+  <script src="js/physics/emulator.js"></script>
+  <script src="js/physics/mis.js"></script>
+  <script src="js/physics/measurement.js"></script>
+  <script src="js/physics/model.js"></script>
+  <script src="js/data/demo-baked.js"></script>
+  <script src="js/render/stage.js"></script>
+  <script src="js/render/deathstar.js"></script>
+  <script src="js/render/trooper.js"></script>
+  <script src="js/render/beams.js"></script>
+  <script src="js/render/effects.js"></script>
+  <script src="js/render/readout.js"></script>
+  <script src="js/ui/codepanel.js"></script>
+  <script src="js/ui/hud.js"></script>
+  <script src="js/ui/pulsepanel.js"></script>
+  <script src="js/ui/r6panel.js"></script>
+  <script src="js/ui/sciencepanel.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

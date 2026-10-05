@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Death Star Quantum Control — physics tests</title>
+<style>
+  body { background: #05080d; color: #cfe8ff; font: 16px/1.5 ui-monospace, Consolas, "DejaVu Sans Mono", monospace; margin: 2rem; }
+  h1 { font-size: 1.4rem; color: #fff; }
+  .pass { color: #5dffa8; } .fail { color: #ff5d6c; font-weight: bold; }
+  .info { color: #8fb6d9; }
+  #summary { font-size: 1.3rem; margin: 1rem 0; }
+  li { margin: .15rem 0; }
+</style>
+</head>
+<body>
+<h1>Physics &amp; model tests (no dependencies, runs offline)</h1>
+<div id="summary">Running…</div>
+<ol id="results"></ol>
+
+<script src="../js/config.js"></script>
+<script src="../js/prng.js"></script>
+<script src="../js/register.js"></script>
+<script src="../js/physics/rydberg.js"></script>
+<script src="../js/physics/emulator.js"></script>
+<script src="../js/physics/mis.js"></script>
+<script src="../js/physics/measurement.js"></script>
+<script src="../js/physics/model.js"></script>
+<script src="tests.js"></script>
+</body>
+</html>
